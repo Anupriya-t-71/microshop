@@ -8,149 +8,149 @@ services:
   audit:
     image: 13.232.118.226:443/backend/audit:1.0
     container_name: audit
-     environment:
+    environment:
       SERVICE_NAME: audit
     
   auth: 
     image: 13.232.118.226:443/backend/auth:1.0
     container_name: auth
-     environment:
+    environment:
       SERVICE_NAME: auth
 
   cart:
     image: 13.232.118.226:443/backend/cart:1.0
     container_name: cart
-     environment:
+    environment:
       SERVICE_NAME: cart
 
   catalog:
     image: 13.232.118.226:443/backend/catalog:1.0
     container_name: catalog
-     environment:
+    environment:
       SERVICE_NAME: catalog
     
   coupon:
     image: 13.232.118.226:443/backend/coupon:1.0
     container_name: coupon
-     environment:
+    environment:
       SERVICE_NAME: coupon
     
   email:
     image: 13.232.118.226:443/backend/email:1.0
     container_name: email
-     environment:
+    environment:
       SERVICE_NAME: email
     
   inventory:
     image: 13.232.118.226:443/backend/inventory:1.0
     container_name: inventory
-     environment:
+    environment:
       SERVICE_NAME: inventory
    
   media:
     image: 13.232.118.226:443/backend/media:1.0
     container_name: media
-     environment:
+    environment:
       SERVICE_NAME: media
    
   notification:
     image: 13.232.118.226:443/backend/notification:1.0
     container_name: notification
-     environment:
+    environment:
       SERVICE_NAME: notification
     
   order:
     image: 13.232.118.226:443/backend/order:1.0
     container_name: order
-     environment:
+    environment:
       SERVICE_NAME: order
    
 
   payment:
     image: 13.232.118.226:443/backend/payment:1.0
     container_name: payment
-     environment:
+    environment:
       SERVICE_NAME: payment
     
 
   product:
     image: 13.232.118.226:443/backend/product:1.0
     container_name: product
-     environment:
+    environment:
       SERVICE_NAME: product
          
 
   profile:
     image: 13.232.118.226:443/backend/profile:1.0
     container_name: profile
-     environment:
+    environment:
       SERVICE_NAME: profile
     
   recommendation:
     image: 13.232.118.226:443/backend/recommendation:1.0
     container_name: recommendation
-     environment:
+    environment:
       SERVICE_NAME: recommendation
    
 
   reporting:
     image: 13.232.118.226:443/backend/reporting:1.0
     container_name: reporting
-     environment:
+    environment:
       SERVICE_NAME: reporting
     
 
   review:
     image: 13.232.118.226:443/backend/review:1.0
     container_name: review
-     environment:
+    environment:
       SERVICE_NAME: review
    
 
   scheduler:
     image: 13.232.118.226:443/backend/scheduler:1.0
     container_name: scheduler
-     environment:
+    environment:
       SERVICE_NAME: scheduler
    
   search:
     image: 13.232.118.226:443/backend/search:1.0
     container_name: search
-     environment:
+    environment:
       SERVICE_NAME: search
    
   settings:
     image: 13.232.118.226:443/backend/settings:1.0
     container_name: settings
-     environment:
+    environment:
       SERVICE_NAME: settings
   
       
   shipping:
     image: 13.232.118.226:443/backend/shipping:1.0
     container_name: shipping
-     environment:
+    environment:
       SERVICE_NAME: shipping
         
 
   sms:
     image: 13.232.118.226:443/backend/sms:1.0
     container_name: sms
-     environment:
+    environment:
       SERVICE_NAME: sms
    
 
   user:
     image: 13.232.118.226:443/backend/user:1.0
     container_name: user
-     environment:
+    environment:
       SERVICE_NAME: user
    
 
   wishlist:
     image: 13.232.118.226:443/backend/wishlist:1.0
     container_name: wishlist
-     environment:
+    environment:
       SERVICE_NAME: wishlist
    
 
