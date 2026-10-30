@@ -1,0 +1,154 @@
+services:
+  api-gateway:
+    build: ./services/api-gateway
+    image: microshop/api-gateway:1.0.0
+    environment:
+      SERVICE_NAME: api-gateway
+      SERVICES: "auth,user,profile,product,catalog,inventory,cart,order,payment,shipping,notification,email,sms,search,review,recommendation,wishlist,coupon,analytics,reporting,media,audit,settings,scheduler"
+    ports:
+      - "3010:8080"
+    depends_on:
+      - auth
+      - user
+      - profile
+      - product
+      - catalog
+      - inventory
+      - cart
+      - order
+      - payment
+      - shipping
+      - notification
+      - email
+      - sms
+      - search
+      - review
+      - recommendation
+      - wishlist
+      - coupon
+      - analytics
+      - reporting
+      - media
+      - audit
+      - settings
+      - scheduler
+  auth:
+    build: ./services/auth
+    image: microshop/auth:1.0.0
+    environment:
+      SERVICE_NAME: auth
+  user:
+    build: ./services/user
+    image: microshop/user:1.0.0
+    environment:
+      SERVICE_NAME: user
+  profile:
+    build: ./services/profile
+    image: microshop/profile:1.0.0
+    environment:
+      SERVICE_NAME: profile
+  product:
+    build: ./services/product
+    image: microshop/product:1.0.0
+    environment:
+      SERVICE_NAME: product
+  catalog:
+    build: ./services/catalog
+    image: microshop/catalog:1.0.0
+    environment:
+      SERVICE_NAME: catalog
+  inventory:
+    build: ./services/inventory
+    image: microshop/inventory:1.0.0
+    environment:
+      SERVICE_NAME: inventory
+  cart:
+    build: ./services/cart
+    image: microshop/cart:1.0.0
+    environment:
+      SERVICE_NAME: cart
+  order:
+    build: ./services/order
+    image: microshop/order:1.0.0
+    environment:
+      SERVICE_NAME: order
+  payment:
+    build: ./services/payment
+    image: microshop/payment:1.0.0
+    environment:
+      SERVICE_NAME: payment
+  shipping:
+    build: ./services/shipping
+    image: microshop/shipping:1.0.0
+    environment:
+      SERVICE_NAME: shipping
+  notification:
+    build: ./services/notification
+    image: microshop/notification:1.0.0
+    environment:
+      SERVICE_NAME: notification
+  email:
+    build: ./services/email
+    image: microshop/email:1.0.0
+    environment:
+      SERVICE_NAME: email
+  sms:
+    build: ./services/sms
+    image: microshop/sms:1.0.0
+    environment:
+      SERVICE_NAME: sms
+  search:
+    build: ./services/search
+    image: microshop/search:1.0.0
+    environment:
+      SERVICE_NAME: search
+  review:
+    build: ./services/review
+    image: microshop/review:1.0.0
+    environment:
+      SERVICE_NAME: review
+  recommendation:
+    build: ./services/recommendation
+    image: microshop/recommendation:1.0.0
+    environment:
+      SERVICE_NAME: recommendation
+  wishlist:
+    build: ./services/wishlist
+    image: microshop/wishlist:1.0.0
+    environment:
+      SERVICE_NAME: wishlist
+  coupon:
+    build: ./services/coupon
+    image: microshop/coupon:1.0.0
+    environment:
+      SERVICE_NAME: coupon
+  analytics:
+    build: ./services/analytics
+    image: microshop/analytics:1.0.0
+    environment:
+      SERVICE_NAME: analytics
+  reporting:
+    build: ./services/reporting
+    image: microshop/reporting:1.0.0
+    environment:
+      SERVICE_NAME: reporting
+  media:
+    build: ./services/media
+    image: microshop/media:1.0.0
+    environment:
+      SERVICE_NAME: media
+  audit:
+    build: ./services/audit
+    image: microshop/audit:1.0.0
+    environment:
+      SERVICE_NAME: audit
+  settings:
+    build: ./services/settings
+    image: microshop/settings:1.0.0
+    environment:
+      SERVICE_NAME: settings
+  scheduler:
+    build: ./services/scheduler
+    image: microshop/scheduler:1.0.0
+    environment:
+      SERVICE_NAME: scheduler
