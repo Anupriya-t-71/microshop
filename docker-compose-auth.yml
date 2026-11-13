@@ -1,0 +1,136 @@
+services:
+
+  analytics:
+    image: 3.110.79.255:443/backend/analytics:1.0
+    container_name: analytics
+
+  audit:
+    image: 3.110.79.255:443/backend/audit:1.0
+    container_name: audit
+    
+  auth:
+    image: 3.110.79.255:443/backend/auth:1.0
+    container_name: auth
+    
+
+  cart:
+    image: 3.110.79.255:443/backend/cart:1.0
+    container_name: cart
+    
+
+  coupon:
+    image: 3.110.79.255:443/backend/coupon:1.0
+    container_name: coupon
+
+  catalog:
+    image: 3.110.79.255:443/backend/catalog:1.0
+    container_name: catalog
+
+  email:
+    image: 3.110.79.255:443/backend/email:1.0
+    container_name: email
+
+  media:
+    image: 3.110.79.255:443/backend/media:1.0
+    container_name: media
+
+  inventory:
+    image: 3.110.79.255:443/backend/inventory:1.0
+    container_name: inventory
+
+  notification:
+    image: 3.110.79.255:443/backend/notification:1.0
+    container_name: notification
+
+  order:
+    image: 3.110.79.255:443/backend/order:1.0
+    container_name: order
+
+  payment:
+    image: 3.110.79.255:443/backend/payment:1.0
+    container_name: payment
+
+  profile:
+    image: 3.110.79.255:443/backend/profile:1.0
+    container_name: profile
+    
+  product:
+    image: 3.110.79.255:443/backend/product:1.0
+    container_name: product
+
+  recommendation:
+    image: 3.110.79.255:443/backend/recommendation:1.0
+    container_name: recommendation
+
+  review:
+    image: 3.110.79.255:443/backend/review:1.0
+    container_name: review
+
+  reporting:
+    image: 3.110.79.255:443/backend/reporting:1.0
+    container_name: reporting
+
+  scheduler:
+    image: 3.110.79.255:443/backend/scheduler:1.0
+    container_name: scheduler
+
+  settings:
+    image: 3.110.79.255:443/backend/settings:1.0
+    container_name: settings
+
+  search:
+    image: 3.110.79.255:443/backend/search:1.0
+    container_name: search
+
+  sms:
+    image: 3.110.79.255:443/backend/sms:1.0
+    container_name: sms      
+
+  shipping:
+    image: 3.110.79.255:443/backend/shipping:1.0
+    container_name: shipping
+
+  user:
+    image: 3.110.79.255:443/backend/user:1.0
+    container_name: user
+
+  wishlist:
+    image: 3.110.79.255:443/backend/wishlist:1.0
+    container_name: wishlist  
+
+  api-gateway:
+    image: 3.110.79.255:443/backend/api-gateway:1.0
+    container_name: api-gateway
+    environment:
+      port:
+        - "8080:8080"
+    depends_on:
+      - analytics
+      - audit
+      - auth
+      - cart
+      - catalog
+      - coupon
+      - email
+      - inventory
+      - media
+      - notification
+      - order
+      - payment
+      - profile
+      - product
+      - review
+      - recommendation
+      - reporting
+      - scheduler
+      - settings
+      - search
+      - shipping
+      - user
+      - sms
+      - wishlist                                 
+    
+
+
+    
+    
