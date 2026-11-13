@@ -101,7 +101,7 @@ services:
   api-gateway:
     image: 3.110.79.255:443/backend/api-gateway:1.0
     container_name: api-gateway
-    port:
+    ports:
       - "8081:8080"
     depends_on:
       - analytics
