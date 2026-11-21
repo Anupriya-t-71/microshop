@@ -1,6 +1,60 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
+  name: recommendation-service
+  labels:
+    app: recommendation-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: recommendation-service
+  template:
+    metadata:
+      labels:
+        app: recommendation-service
+    spec:
+      imagePullSerects:
+        - name: harbor-secret
+      containers:
+      - name: recommendation-service
+        image: 13.200.210.101:443/backend/recommendation:1.0
+        ports:
+        - containerPort: 8080
+        envFrom:
+          - configMapRef:
+              name: recommendation-config 
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: audit-service
+  labels:
+    app: audit-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: audit-service
+  template:
+    metadata:
+      labels:
+        app: audit-service
+    spec:
+      imagePullSerects:
+        - name: harbor-secret
+      containers:
+      - name: audit-service
+        image: 13.200.210.101:443/backend/audit:1.0
+        ports:
+        - containerPort: 8080
+        envFrom:
+          - configMapRef:
+              name: audit-config 
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
   name: auth-service
   labels:
     app: auth-service
@@ -14,20 +68,206 @@ spec:
       labels:
         app: auth-service
     spec:
+      imagePullSerects:
+        - name: harbor-secret
       containers:
-      - imagePullSecrets:
-        name: harbor-secret
       - name: auth-service
-        image: 13.200.210.3:443/backend/auth-service:1.0
+        image: 13.200.210.101:443/backend/auth:1.0
         ports:
-        - containerPort: 5001
-      - configMapRef:
-        name: auth-config
-      - secretRef:
-        name: auth-secret   
-
+        - containerPort: 8080
+        envFrom:
+          - configMapRef:
+              name: auth-config    
 ---
-
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cart-service
+  labels:
+    app: cart-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: cart-service
+  template:
+    metadata:
+      labels:
+        app: cart-service
+    spec:
+      imagePullSerects:
+        - name: harbor-secret
+      containers:
+      - name: cart-service
+        image: 13.200.210.101:443/backend/cart:1.0
+        ports:
+        - containerPort: 8080
+        envFrom:
+          - configMapRef:
+              name: cart-config 
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: coupon-service
+  labels:
+    app: coupon-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: coupon-service
+  template:
+    metadata:
+      labels:
+        app: coupon-service
+    spec:
+      imagePullSerects:
+        - name: harbor-secret
+      containers:
+      - name: coupon-service
+        image: 13.200.210.101:443/backend/coupon:1.0
+        ports:
+        - containerPort: 8080
+        envFrom:
+          - configMapRef:
+              name: coupon-config   
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: catalog-service
+  labels:
+    app: catalog-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: catalog-service
+  template:
+    metadata:
+      labels:
+        app: catalog-service
+    spec:
+      imagePullSerects:
+        - name: harbor-secret
+      containers:
+      - name: catalog-service
+        image: 13.200.210.101:443/backend/catalog:1.0
+        ports:
+        - containerPort: 8080
+        envFrom:
+          - configMapRef:
+              name: catalog-config    
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: email-service
+  labels:
+    app: email-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: email-service
+  template:
+    metadata:
+      labels:
+        app: email-service
+    spec:
+      imagePullSerects:
+        - name: harbor-secret
+      containers:
+      - name: email-service
+        image: 13.200.210.101:443/backend/email:1.0
+        ports:
+        - containerPort: 8080
+        envFrom:
+          - configMapRef:
+              name: email-config
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: inventory-service
+  labels:
+    app: inventory-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: inventory-service
+  template:
+    metadata:
+      labels:
+        app: inventory-service
+    spec:
+      imagePullSerects:
+        - name: harbor-secret
+      containers:
+      - name: inventory-service
+        image: 13.200.210.101:443/backend/inventory:1.0
+        ports:
+        - containerPort: 8080
+        envFrom:
+          - configMapRef:
+              name: inventory-config       
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: media-service
+  labels:
+    app: media-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: media-service
+  template:
+    metadata:
+      labels:
+        app: media-service
+    spec:
+      imagePullSerects:
+        - name: harbor-secret
+      containers:
+      - name: media-service
+        image: 13.200.210.101:443/backend/media:1.0
+        ports:
+        - containerPort: 8080
+        envFrom:
+          - configMapRef:
+              name: media-config 
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: notification-service
+  labels:
+    app: notification-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: notification-service
+  template:
+    metadata:
+      labels:
+        app: notification-service
+    spec:
+      imagePullSerects:
+        - name: harbor-secret
+      containers:
+      - name: notification-service
+        image: 13.200.210.101:443/backend/notification:1.0
+        ports:
+        - containerPort: 8080
+        envFrom:
+          - configMapRef:
+              name: notification-config 
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -44,17 +284,43 @@ spec:
       labels:
         app: order-service
     spec:
+      imagePullSerects:
+        - name: harbor-secret
       containers:
-      - imagePullSecrets:
-        name: harbor-secret
       - name: order-service
-        image: 13.200.210.3:443/backend/order-service:1.0
+        image: 13.200.210.101:443/backend/order:1.0
         ports:
-        - containerPort: 5002
-      - configMapRef:
-        name: order-config  
+        - containerPort: 8080
+        envFrom:
+          - configMapRef:
+              name: order-config  
+---apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: payment-service
+  labels:
+    app: payment-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: payment-service
+  template:
+    metadata:
+      labels:
+        app: payment-service
+    spec:
+      imagePullSerects:
+        - name: harbor-secret
+      containers:
+      - name: payment-service
+        image: 13.200.210.101:443/backend/payment:1.0
+        ports:
+        - containerPort: 8080
+        envFrom:
+          - configMapRef:
+              name: payment-config
 ---
-
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -71,36 +337,337 @@ spec:
       labels:
         app: product-service
     spec:
+      imagePullSerects:
+        - name: harbor-secret
       containers:
-      - imagePullSecrets:
-        name: harbor-secret
       - name: product-service
-        image: 13.200.210.3:443/backend/product-service:1.0
+        image: 13.200.210.101:443/backend/product:1.0
         ports:
-        - containerPort: 5003
-      - configMapRef:
-        name: product-config 
-         
+        - containerPort: 8080
+        envFrom:
+          - configMapRef:
+              name: product-config
 ---
-
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: mongodb
+  name: profile-service
   labels:
-    app: mongodb
+    app: profile-service
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: mongodb
+      app: profile-service
   template:
     metadata:
       labels:
-        app: mongodb
+        app: profile-service
     spec:
+      imagePullSerects:
+        - name: harbor-secret
       containers:
-      - name: mongodb
-        image: mongo:4.4
+      - name: profile-service
+        image: 13.200.210.101:443/backend/profile:1.0
         ports:
-        - containerPort: 27017
+        - containerPort: 8080
+        envFrom:
+          - configMapRef:
+              name: profile-config   
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: recommendation-service
+  labels:
+    app: recommendation-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: recommendation-service
+  template:
+    metadata:
+      labels:
+        app: recommendation-service
+    spec:
+      imagePullSerects:
+        - name: harbor-secret
+      containers:
+      - name: recommendation-service
+        image: 13.200.210.101:443/backend/recommendation:1.0
+        ports:
+        - containerPort: 8080
+        envFrom:
+          - configMapRef:
+              name: recommendation-config     
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: review-service
+  labels:
+    app: review-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: review-service
+  template:
+    metadata:
+      labels:
+        app: review-service
+    spec:
+      imagePullSerects:
+        - name: harbor-secret
+      containers:
+      - name: review-service
+        image: 13.200.210.101:443/backend/review:1.0
+        ports:
+        - containerPort: 8080
+        envFrom:
+          - configMapRef:
+              name: review-config    
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: reporting-service
+  labels:
+    app: reporting-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: reporting-service
+  template:
+    metadata:
+      labels:
+        app: reporting-service
+    spec:
+      imagePullSerects:
+        - name: harbor-secret
+      containers:
+      - name: reporting-service
+        image: 13.200.210.101:443/backend/reporting:1.0
+        ports:
+        - containerPort: 8080
+        envFrom:
+          - configMapRef:
+              name: reporting-config   
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: scheduler-service
+  labels:
+    app: scheduler-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: scheduler-service
+  template:
+    metadata:
+      labels:
+        app: scheduler-service
+    spec:
+      imagePullSerects:
+        - name: harbor-secret
+      containers:
+      - name: scheduler-service
+        image: 13.200.210.101:443/backend/scheduler:1.0
+        ports:
+        - containerPort: 8080
+        envFrom:
+          - configMapRef:
+              name: scheduler-config   
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: settings-service
+  labels:
+    app: settings-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: settings-service
+  template:
+    metadata:
+      labels:
+        app: settings-service
+    spec:
+      imagePullSerects:
+        - name: harbor-secret
+      containers:
+      - name: settings-service
+        image: 13.200.210.101:443/backend/settings:1.0
+        ports:
+        - containerPort: 8080
+        envFrom:
+          - configMapRef:
+              name: settings-config    
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: shipping-service
+  labels:
+    app: shipping-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: shipping-service
+  template:
+    metadata:
+      labels:
+        app: shipping-service
+    spec:
+      imagePullSerects:
+        - name: harbor-secret
+      containers:
+      - name: shipping-service
+        image: 13.200.210.101:443/backend/shipping:1.0
+        ports:
+        - containerPort: 8080
+        envFrom:
+          - configMapRef:
+              name: shipping-config  
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: search-service
+  labels:
+    app: search-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: search-service
+  template:
+    metadata:
+      labels:
+        app: search-service
+    spec:
+      imagePullSerects:
+        - name: harbor-secret
+      containers:
+      - name: search-service
+        image: 13.200.210.101:443/backend/search:1.0
+        ports:
+        - containerPort: 8080
+        envFrom:
+          - configMapRef:
+              name: search-config    
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sms-service
+  labels:
+    app: sms-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: sms-service
+  template:
+    metadata:
+      labels:
+        app: sms-service
+    spec:
+      imagePullSerects:
+        - name: harbor-secret
+      containers:
+      - name: sms-service
+        image: 13.200.210.101:443/backend/sms:1.0
+        ports:
+        - containerPort: 8080
+        envFrom:
+          - configMapRef:
+              name: sms-config  
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: user-service
+  labels:
+    app: user-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: user-service
+  template:
+    metadata:
+      labels:
+        app: user-service
+    spec:
+      imagePullSerects:
+        - name: harbor-secret
+      containers:
+      - name: user-service
+        image: 13.200.210.101:443/backend/user:1.0
+        ports:
+        - containerPort: 8080
+        envFrom:
+          - configMapRef:
+              name: user-config  
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: wishlist-service
+  labels:
+    app: wishlist-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: wishlist-service
+  template:
+    metadata:
+      labels:
+        app: wishlist-service
+    spec:
+      imagePullSerects:
+        - name: harbor-secret
+      containers:
+      - name: wishlist-service
+        image: 13.200.210.101:443/backend/wishlist:1.0
+        ports:
+        - containerPort: 8080
+        envFrom:
+          - configMapRef:
+              name: wishlist-config 
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: api-gateway-service
+  labels:
+    app: api-gateway-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: api-gateway-service
+  template:
+    metadata:
+      labels:
+        app: api-gateway-service
+    spec:
+      imagePullSerects:
+        - name: harbor-secret
+      containers:
+      - name: api-gateway-service
+        image: 13.200.210.101:443/backend/api-gateway:1.0
+        ports:
+        - containerPort: 8080
+        envFrom:
+          - configMapRef:
+              name: api-gateway-config                                                                                                                                                                                                                                                                                                
