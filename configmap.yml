@@ -4,7 +4,7 @@ metadata:
   name: analytics-config
 data:
   PORT: "8080"
-  SERVICE: "analytics"
+  SERVICE_NAME: "analytics"
   SERVICES: "analytics,audit,auth,api-gateway,cart,coupon,catalog,email,inventory,media,notification,order,payment,product,profile,recommendation,review,reporting,settings,scheduler,shipping,search,sms,user,wishlist"
 ---
 apiVersion: v1
@@ -13,7 +13,7 @@ metadata:
   name: auth-config
 data:
   PORT: "8080"
-  SERVICE: "auth"
+  SERVICE_NAME: "auth"
   SERVICES: "analytics,audit,auth,api-gateway,cart,coupon,catalog,email,inventory,media,notification,order,payment,product,profile,recommendation,review,reporting,settings,scheduler,shipping,search,sms,user,wishlist"
 ---
 apiVersion: v1
@@ -22,7 +22,7 @@ metadata:
   name: audit-config
 data:
   PORT: "8080"
-  SERVICE: "audit"
+  SERVICE_NAME: "audit"
   SERVICES: "analytics,audit,auth,api-gateway,cart,coupon,catalog,email,inventory,media,notification,order,payment,product,profile,recommendation,review,reporting,settings,scheduler,shipping,search,sms,user,wishlist"
 ---
 apiVersion: v1
@@ -31,7 +31,7 @@ metadata:
   name: api-gateway-config
 data:
   PORT: "8080"
-  SERVICE: "api-gateway
+  SERVICE_NAME: "api-gateway
   SERVICES: "analytics,audit,auth,api-gateway,cart,coupon,catalog,email,inventory,media,notification,order,payment,product,profile,recommendation,review,reporting,settings,scheduler,shipping,search,sms,user,wishlist"
 ---
 apiVersion: v1
@@ -40,7 +40,7 @@ metadata:
   name: cart-config
 data:
   PORT: "8080"
-  SERVICE: "cart"
+  SERVICE_NAME: "cart"
   SERVICES: "analytics,audit,auth,api-gateway,cart,coupon,catalog,email,inventory,media,notification,order,payment,product,profile,recommendation,review,reporting,settings,scheduler,shipping,search,sms,user,wishlist"
 ---
 apiVersion: v1
@@ -49,7 +49,7 @@ metadata:
   name: analytics-config
 data:
   PORT: "8080"
-  SERVICE: "analytics"
+  SERVICE_NAME: "analytics"
   SERVICES: "analytics,audit,auth,api-gateway,cart,coupon,catalog,email,inventory,media,notification,order,payment,product,profile,recommendation,review,reporting,settings,scheduler,shipping,search,sms,user,wishlist"
 ---
 apiVersion: v1
@@ -58,7 +58,7 @@ metadata:
   name: catalog-config
 data:
   PORT: "8080"
-  SERVICE: "catalog"
+  SERVICE_NAME: "catalog"
   SERVICES: "analytics,audit,auth,api-gateway,cart,coupon,catalog,email,inventory,media,notification,order,payment,product,profile,recommendation,review,reporting,settings,scheduler,shipping,search,sms,user,wishlist"
 ---
 apiVersion: v1
@@ -67,7 +67,7 @@ metadata:
   name: coupon-config
 data:
   PORT: "8080"
-  SERVICE: "coupon"
+  SERVICE_NAME: "coupon"
   SERVICES: "analytics,audit,auth,api-gateway,cart,coupon,catalog,email,inventory,media,notification,order,payment,product,profile,recommendation,review,reporting,settings,scheduler,shipping,search,sms,user,wishlist"
 ---
 apiVersion: v1
@@ -76,7 +76,7 @@ metadata:
   name: email-config
 data:
   PORT: "8080"
-  SERVICE: "email"
+  SERVICE_NAME: "email"
   SERVICES: "analytics,audit,auth,api-gateway,cart,coupon,catalog,email,inventory,media,notification,order,payment,product,profile,recommendation,review,reporting,settings,scheduler,shipping,search,sms,user,wishlist"
 ---
 apiVersion: v1
@@ -85,7 +85,7 @@ metadata:
   name: inventory-config
 data:
   PORT: "8080"
-  SERVICE: "inventory"
+  SERVICE_NAME: "inventory"
   SERVICES: "analytics,audit,auth,api-gateway,cart,coupon,catalog,email,inventory,media,notification,order,payment,product,profile,recommendation,review,reporting,settings,scheduler,shipping,search,sms,user,wishlist"
 ---
 apiVersion: v1
@@ -94,7 +94,7 @@ metadata:
   name: media-config
 data:
   PORT: "8080"
-  SERVICE: "media"
+  SERVICE_NAME: "media"
   SERVICES: "analytics,audit,auth,api-gateway,cart,coupon,catalog,email,inventory,media,notification,order,payment,product,profile,recommendation,review,reporting,settings,scheduler,shipping,search,sms,user,wishlist"
 ---
 apiVersion: v1
@@ -103,7 +103,7 @@ metadata:
   name: notification-config
 data:
   PORT: "8080"
-  SERVICE: "notification"
+  SERVICE_NAME: "notification"
   SERVICES: "analytics,audit,auth,api-gateway,cart,coupon,catalog,email,inventory,media,notification,order,payment,product,profile,recommendation,review,reporting,settings,scheduler,shipping,search,sms,user,wishlist"
 ---
 apiVersion: v1
@@ -112,7 +112,7 @@ metadata:
   name: order-config
 data:
   PORT: "8080"
-  SERVICE: "order"
+  SERVICE_NAME: "order"
   SERVICES: "analytics,audit,auth,api-gateway,cart,coupon,catalog,email,inventory,media,notification,order,payment,product,profile,recommendation,review,reporting,settings,scheduler,shipping,search,sms,user,wishlist"
 ---
 apiVersion: v1
@@ -121,7 +121,7 @@ metadata:
   name: payment-config
 data:
   PORT: "8080"
-  SERVICE: "payment"
+  SERVICE_NAME: "payment"
   SERVICES: "analytics,audit,auth,api-gateway,cart,coupon,catalog,email,inventory,media,notification,order,payment,product,profile,recommendation,review,reporting,settings,scheduler,shipping,search,sms,user,wishlist"
 ---
 apiVersion: v1
@@ -130,7 +130,7 @@ metadata:
   name: product-config
 data:
   PORT: "8080"
-  SERVICE: "product"
+  SERVICE_NAME: "product"
   SERVICES: "analytics,audit,auth,api-gateway,cart,coupon,catalog,email,inventory,media,notification,order,payment,product,profile,recommendation,review,reporting,settings,scheduler,shipping,search,sms,user,wishlist"
 ---
 apiVersion: v1
@@ -139,7 +139,7 @@ metadata:
   name: profile-config
 data:
   PORT: "8080"
-  SERVICE: "profile"
+  SERVICE_NAME: "profile"
   SERVICES: "analytics,audit,auth,api-gateway,cart,coupon,catalog,email,inventory,media,notification,order,payment,product,profile,recommendation,review,reporting,settings,scheduler,shipping,search,sms,user,wishlist"
 ---
 apiVersion: v1
@@ -148,7 +148,7 @@ metadata:
   name: recommendation-config
 data:
   PORT: "8080"
-  SERVICE: "recommendation"
+  SERVICE_NAME: "recommendation"
   SERVICES: "analytics,audit,auth,api-gateway,cart,coupon,catalog,email,inventory,media,notification,order,payment,product,profile,recommendation,review,reporting,settings,scheduler,shipping,search,sms,user,wishlist"
 ---
 apiVersion: v1
@@ -157,7 +157,7 @@ metadata:
   name: search-config
 data:
   PORT: "8080"
-  SERVICE: "search"
+  SERVICE_NAME: "search"
   SERVICES: "analytics,audit,auth,api-gateway,cart,coupon,catalog,email,inventory,media,notification,order,payment,product,profile,recommendation,review,reporting,settings,scheduler,shipping,search,sms,user,wishlist"
 ---
 apiVersion: v1
@@ -166,7 +166,7 @@ metadata:
   name: settings-config
 data:
   PORT: "8080"
-  SERVICE: "settings"
+  SERVICE_NAME: "settings"
   SERVICES: "analytics,audit,auth,api-gateway,cart,coupon,catalog,email,inventory,media,notification,order,payment,product,profile,recommendation,review,reporting,settings,scheduler,shipping,search,sms,user,wishlist"
 ---
 apiVersion: v1
@@ -175,7 +175,7 @@ metadata:
   name: scheduler-config
 data:
   PORT: "8080"
-  SERVICE: "scheduler"
+  SERVICE_NAME: "scheduler"
   SERVICES: "analytics,audit,auth,api-gateway,cart,coupon,catalog,email,inventory,media,notification,order,payment,product,profile,recommendation,review,reporting,settings,scheduler,shipping,search,sms,user,wishlist"
 ---
 apiVersion: v1
@@ -184,7 +184,7 @@ metadata:
   name: shipping-config
 data:
   PORT: "8080"
-  SERVICE: "shipping"
+  SERVICE_NAME: "shipping"
   SERVICES: "analytics,audit,auth,api-gateway,cart,coupon,catalog,email,inventory,media,notification,order,payment,product,profile,recommendation,review,reporting,settings,scheduler,shipping,search,sms,user,wishlist"
 ---
 apiVersion: v1
@@ -193,7 +193,7 @@ metadata:
   name: sms-config
 data:
   PORT: "8080"
-  SERVICE: "sms"
+  SERVICE_NAME: "sms"
   SERVICES: "analytics,audit,auth,api-gateway,cart,coupon,catalog,email,inventory,media,notification,order,payment,product,profile,recommendation,review,reporting,settings,scheduler,shipping,search,sms,user,wishlist"
 ---
 apiVersion: v1
@@ -202,7 +202,7 @@ metadata:
   name: user-config
 data:
   PORT: "8080"
-  SERVICE: "user"
+  SERVICE_NAME: "user"
   SERVICES: "analytics,audit,auth,api-gateway,cart,coupon,catalog,email,inventory,media,notification,order,payment,product,profile,recommendation,review,reporting,settings,scheduler,shipping,search,sms,user,wishlist"
 ---
 apiVersion: v1
@@ -211,7 +211,7 @@ metadata:
   name: wishlist-config
 data:
   PORT: "8080"
-  SERVICE: "wishlist"
+  SERVICE_NAME: "wishlist"
   SERVICES: "analytics,audit,auth,api-gateway,cart,coupon,catalog,email,inventory,media,notification,order,payment,product,profile,recommendation,review,reporting,settings,scheduler,shipping,search,sms,user,wishlist"
 
 
