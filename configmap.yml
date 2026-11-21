@@ -1,26 +1,218 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
+  name: analytics-config
+data:
+  PORT: 8080
+  SERVICE: "analytics"
+  SERVICES: ("analytics","audit","auth","api-gateway","cart","coupon","catalog","email","inventory","media","notification","order","payment","product","profile","recommendation","review","reporting","settings","scheduler","shipping","search","sms","user","wishlist")
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
   name: auth-config
 data:
-  PORT: 5001
-  MONGO_URI: mongodb://mongo:27017/authdb
-
+  PORT: 8080
+  SERVICE: "auth"
+  SERVICES: ("analytics","audit","auth","api-gateway","cart","coupon","catalog","email","inventory","media","notification","order","payment","product","profile","recommendation","review","reporting","settings","scheduler","shipping","search","sms","user","wishlist")
 ---
- 
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: audit-config
+data:
+  PORT: 8080
+  SERVICE: "audit"
+  SERVICES: ("analytics","audit","auth","api-gateway","cart","coupon","catalog","email","inventory","media","notification","order","payment","product","profile","recommendation","review","reporting","settings","scheduler","shipping","search","sms","user","wishlist")
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: api-gateway-config
+data:
+  PORT: 8080
+  SERVICE: "api-gateway
+  SERVICES: ("analytics","audit","auth","api-gateway","cart","coupon","catalog","email","inventory","media","notification","order","payment","product","profile","recommendation","review","reporting","settings","scheduler","shipping","search","sms","user","wishlist")
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: cart-config
+data:
+  PORT: 8080
+  SERVICE: "cart"
+  SERVICES: ("analytics","audit","auth","api-gateway","cart","coupon","catalog","email","inventory","media","notification","order","payment","product","profile","recommendation","review","reporting","settings","scheduler","shipping","search","sms","user","wishlist")
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: analytics-config
+data:
+  PORT: 8080
+  SERVICE: "analytics"
+  SERVICES: ("analytics","audit","auth","api-gateway","cart","coupon","catalog","email","inventory","media","notification","order","payment","product","profile","recommendation","review","reporting","settings","scheduler","shipping","search","sms","user","wishlist")
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: catalog-config
+data:
+  PORT: 8080
+  SERVICE: "catalog"
+  SERVICES: ("analytics","audit","auth","api-gateway","cart","coupon","catalog","email","inventory","media","notification","order","payment","product","profile","recommendation","review","reporting","settings","scheduler","shipping","search","sms","user","wishlist")
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: coupon-config
+data:
+  PORT: 8080
+  SERVICE: "coupon"
+  SERVICES: ("analytics","audit","auth","api-gateway","cart","coupon","catalog","email","inventory","media","notification","order","payment","product","profile","recommendation","review","reporting","settings","scheduler","shipping","search","sms","user","wishlist")
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: email-config
+data:
+  PORT: 8080
+  SERVICE: "email"
+  SERVICES: ("analytics","audit","auth","api-gateway","cart","coupon","catalog","email","inventory","media","notification","order","payment","product","profile","recommendation","review","reporting","settings","scheduler","shipping","search","sms","user","wishlist")
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: inventory-config
+data:
+  PORT: 8080
+  SERVICE: "inventory"
+  SERVICES: ("analytics","audit","auth","api-gateway","cart","coupon","catalog","email","inventory","media","notification","order","payment","product","profile","recommendation","review","reporting","settings","scheduler","shipping","search","sms","user","wishlist")
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: media-config
+data:
+  PORT: 8080
+  SERVICE: "media"
+  SERVICES: ("analytics","audit","auth","api-gateway","cart","coupon","catalog","email","inventory","media","notification","order","payment","product","profile","recommendation","review","reporting","settings","scheduler","shipping","search","sms","user","wishlist")
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: notification-config
+data:
+  PORT: 8080
+  SERVICE: "notification"
+  SERVICES: ("analytics","audit","auth","api-gateway","cart","coupon","catalog","email","inventory","media","notification","order","payment","product","profile","recommendation","review","reporting","settings","scheduler","shipping","search","sms","user","wishlist")
+---
 apiVersion: v1
 kind: ConfigMap
 metadata:
   name: order-config
 data:
-  PORT: 5002
-  MONGO_URI: mongodb://mongo:27017/orderdb
+  PORT: 8080
+  SERVICE: "order"
+  SERVICES: ("analytics","audit","auth","api-gateway","cart","coupon","catalog","email","inventory","media","notification","order","payment","product","profile","recommendation","review","reporting","settings","scheduler","shipping","search","sms","user","wishlist")
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: payment-config
+data:
+  PORT: 8080
+  SERVICE: "payment"
+  SERVICES: ("analytics","audit","auth","api-gateway","cart","coupon","catalog","email","inventory","media","notification","order","payment","product","profile","recommendation","review","reporting","settings","scheduler","shipping","search","sms","user","wishlist")
 ---
 apiVersion: v1
 kind: ConfigMap
 metadata:
   name: product-config
 data:
-  PORT: 5003
-  MONGO_URI: mongodb://mongo:27017/productdb  
-   
+  PORT: 8080
+  SERVICE: "product"
+  SERVICES: ("analytics","audit","auth","api-gateway","cart","coupon","catalog","email","inventory","media","notification","order","payment","product","profile","recommendation","review","reporting","settings","scheduler","shipping","search","sms","user","wishlist")
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: profile-config
+data:
+  PORT: 8080
+  SERVICE: "profile"
+  SERVICES: ("analytics","audit","auth","api-gateway","cart","coupon","catalog","email","inventory","media","notification","order","payment","product","profile","recommendation","review","reporting","settings","scheduler","shipping","search","sms","user","wishlist")
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: recommendation-config
+data:
+  PORT: 8080
+  SERVICE: "recommendation"
+  SERVICES: ("analytics","audit","auth","api-gateway","cart","coupon","catalog","email","inventory","media","notification","order","payment","product","profile","recommendation","review","reporting","settings","scheduler","shipping","search","sms","user","wishlist")
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: search-config
+data:
+  PORT: 8080
+  SERVICE: "search"
+  SERVICES: ("analytics","audit","auth","api-gateway","cart","coupon","catalog","email","inventory","media","notification","order","payment","product","profile","recommendation","review","reporting","settings","scheduler","shipping","search","sms","user","wishlist")
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: settings-config
+data:
+  PORT: 8080
+  SERVICE: "settings"
+  SERVICES: ("analytics","audit","auth","api-gateway","cart","coupon","catalog","email","inventory","media","notification","order","payment","product","profile","recommendation","review","reporting","settings","scheduler","shipping","search","sms","user","wishlist")
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: scheduler-config
+data:
+  PORT: 8080
+  SERVICE: "scheduler"
+  SERVICES: ("analytics","audit","auth","api-gateway","cart","coupon","catalog","email","inventory","media","notification","order","payment","product","profile","recommendation","review","reporting","settings","scheduler","shipping","search","sms","user","wishlist")
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: shipping-config
+data:
+  PORT: 8080
+  SERVICE: "shipping"
+  SERVICES: ("analytics","audit","auth","api-gateway","cart","coupon","catalog","email","inventory","media","notification","order","payment","product","profile","recommendation","review","reporting","settings","scheduler","shipping","search","sms","user","wishlist")
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: sms-config
+data:
+  PORT: 8080
+  SERVICE: "sms"
+  SERVICES: ("analytics","audit","auth","api-gateway","cart","coupon","catalog","email","inventory","media","notification","order","payment","product","profile","recommendation","review","reporting","settings","scheduler","shipping","search","sms","user","wishlist")
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: user-config
+data:
+  PORT: 8080
+  SERVICE: "user"
+  SERVICES: ("analytics","audit","auth","api-gateway","cart","coupon","catalog","email","inventory","media","notification","order","payment","product","profile","recommendation","review","reporting","settings","scheduler","shipping","search","sms","user","wishlist")
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: wishlist-config
+data:
+  PORT: 8080
+  SERVICE: "wishlist"
+  SERVICES: ("analytics","audit","auth","api-gateway","cart","coupon","catalog","email","inventory","media","notification","order","payment","product","profile","recommendation","review","reporting","settings","scheduler","shipping","search","sms","user","wishlist")
+
+
+
