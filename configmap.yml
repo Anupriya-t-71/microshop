@@ -31,7 +31,7 @@ metadata:
   name: api-gateway-config
 data:
   PORT: "8080"
-  SERVICE_NAME: "api-gateway
+  SERVICE_NAME: "api-gateway"
   SERVICES: "analytics,audit,auth,api-gateway,cart,coupon,catalog,email,inventory,media,notification,order,payment,product,profile,recommendation,review,reporting,settings,scheduler,shipping,search,sms,user,wishlist"
 ---
 apiVersion: v1
@@ -46,10 +46,10 @@ data:
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: analytics-config
+  name: review-config
 data:
   PORT: "8080"
-  SERVICE_NAME: "analytics"
+  SERVICE_NAME: "review"
   SERVICES: "analytics,audit,auth,api-gateway,cart,coupon,catalog,email,inventory,media,notification,order,payment,product,profile,recommendation,review,reporting,settings,scheduler,shipping,search,sms,user,wishlist"
 ---
 apiVersion: v1
@@ -213,6 +213,16 @@ data:
   PORT: "8080"
   SERVICE_NAME: "wishlist"
   SERVICES: "analytics,audit,auth,api-gateway,cart,coupon,catalog,email,inventory,media,notification,order,payment,product,profile,recommendation,review,reporting,settings,scheduler,shipping,search,sms,user,wishlist"
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: reporting-config
+data:
+  PORT: "8080"
+  SERVICE_NAME: "reporting"
+  SERVICES: "analytics,audit,auth,api-gateway,cart,coupon,catalog,email,inventory,media,notification,order,payment,product,profile,recommendation,review,reporting,settings,scheduler,shipping,search,sms,user,wishlist"
+
 
 
 
