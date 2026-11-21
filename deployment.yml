@@ -14,7 +14,7 @@ spec:
       labels:
         app: audit-service
     spec:
-      imagePullSerects:
+      imagePullSecrets:
         - name: harbor-secret
       containers:
       - name: audit-service
@@ -41,7 +41,7 @@ spec:
       labels:
         app: auth-service
     spec:
-      imagePullSerects:
+      imagePullSecrets:
         - name: harbor-secret
       containers:
       - name: auth-service
@@ -68,7 +68,7 @@ spec:
       labels:
         app: cart-service
     spec:
-      imagePullSerects:
+      imagePullSecrets:
         - name: harbor-secret
       containers:
       - name: cart-service
@@ -95,7 +95,7 @@ spec:
       labels:
         app: coupon-service
     spec:
-      imagePullSerects:
+      imagePullSecrets:
         - name: harbor-secret
       containers:
       - name: coupon-service
@@ -122,7 +122,7 @@ spec:
       labels:
         app: catalog-service
     spec:
-      imagePullSerects:
+      imagePullSecrets:
         - name: harbor-secret
       containers:
       - name: catalog-service
@@ -149,7 +149,7 @@ spec:
       labels:
         app: email-service
     spec:
-      imagePullSerects:
+      imagePullSecrets:
         - name: harbor-secret
       containers:
       - name: email-service
@@ -176,7 +176,7 @@ spec:
       labels:
         app: inventory-service
     spec:
-      imagePullSerects:
+      imagePullSecrets:
         - name: harbor-secret
       containers:
       - name: inventory-service
@@ -203,7 +203,7 @@ spec:
       labels:
         app: media-service
     spec:
-      imagePullSerects:
+      imagePullSecrets:
         - name: harbor-secret
       containers:
       - name: media-service
@@ -230,7 +230,7 @@ spec:
       labels:
         app: notification-service
     spec:
-      imagePullSerects:
+      imagePullSecrets:
         - name: harbor-secret
       containers:
       - name: notification-service
@@ -257,7 +257,7 @@ spec:
       labels:
         app: order-service
     spec:
-      imagePullSerects:
+      imagePullSecrets:
         - name: harbor-secret
       containers:
       - name: order-service
@@ -283,7 +283,7 @@ spec:
       labels:
         app: payment-service
     spec:
-      imagePullSerects:
+      imagePullSecrets:
         - name: harbor-secret
       containers:
       - name: payment-service
@@ -310,7 +310,7 @@ spec:
       labels:
         app: product-service
     spec:
-      imagePullSerects:
+      imagePullSecrets:
         - name: harbor-secret
       containers:
       - name: product-service
@@ -337,7 +337,7 @@ spec:
       labels:
         app: profile-service
     spec:
-      imagePullSerects:
+      imagePullSecrets:
         - name: harbor-secret
       containers:
       - name: profile-service
@@ -364,7 +364,7 @@ spec:
       labels:
         app: recommendation-service
     spec:
-      imagePullSerects:
+      imagePullSecrets:
         - name: harbor-secret
       containers:
       - name: recommendation-service
@@ -391,7 +391,7 @@ spec:
       labels:
         app: review-service
     spec:
-      imagePullSerects:
+      imagePullSecrets:
         - name: harbor-secret
       containers:
       - name: review-service
@@ -418,7 +418,7 @@ spec:
       labels:
         app: reporting-service
     spec:
-      imagePullSerects:
+      imagePullSecrets:
         - name: harbor-secret
       containers:
       - name: reporting-service
@@ -445,7 +445,7 @@ spec:
       labels:
         app: scheduler-service
     spec:
-      imagePullSerects:
+      imagePullSecrets:
         - name: harbor-secret
       containers:
       - name: scheduler-service
@@ -472,7 +472,7 @@ spec:
       labels:
         app: settings-service
     spec:
-      imagePullSerects:
+      imagePullSecrets:
         - name: harbor-secret
       containers:
       - name: settings-service
@@ -499,7 +499,7 @@ spec:
       labels:
         app: shipping-service
     spec:
-      imagePullSerects:
+      imagePullSecrets:
         - name: harbor-secret
       containers:
       - name: shipping-service
@@ -526,7 +526,7 @@ spec:
       labels:
         app: search-service
     spec:
-      imagePullSerects:
+      imagePullSecrets:
         - name: harbor-secret
       containers:
       - name: search-service
@@ -553,7 +553,7 @@ spec:
       labels:
         app: sms-service
     spec:
-      imagePullSerects:
+      imagePullSecrets:
         - name: harbor-secret
       containers:
       - name: sms-service
@@ -580,7 +580,7 @@ spec:
       labels:
         app: user-service
     spec:
-      imagePullSerects:
+      imagePullSecrets:
         - name: harbor-secret
       containers:
       - name: user-service
@@ -607,7 +607,7 @@ spec:
       labels:
         app: wishlist-service
     spec:
-      imagePullSerects:
+      imagePullSecrets:
         - name: harbor-secret
       containers:
       - name: wishlist-service
@@ -634,7 +634,7 @@ spec:
       labels:
         app: analytics-service
     spec:
-      imagePullSerects:
+      imagePullSecrets:
         - name: harbor-secret
       containers:
       - name: analytics-service
@@ -661,7 +661,7 @@ spec:
       labels:
         app: analytics-service
     spec:
-      imagePullSerects:
+      imagePullSecrets:
         - name: harbor-secret
       containers:
       - name: analytics-service
