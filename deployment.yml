@@ -1,0 +1,106 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: auth-service
+  labels:
+    app: auth-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: auth-service
+  template:
+    metadata:
+      labels:
+        app: auth-service
+    spec:
+      containers:
+      - imagePullSecrets:
+        name: harbor-secret
+      - name: auth-service
+        image: 13.200.210.3:443/backend/auth-service:1.0
+        ports:
+        - containerPort: 5001
+      - configMapRef:
+        name: auth-config
+      - secretRef:
+        name: auth-secret   
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: order-service
+  labels:
+    app: order-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: order-service
+  template:
+    metadata:
+      labels:
+        app: order-service
+    spec:
+      containers:
+      - imagePullSecrets:
+        name: harbor-secret
+      - name: order-service
+        image: 13.200.210.3:443/backend/order-service:1.0
+        ports:
+        - containerPort: 5002
+      - configMapRef:
+        name: order-config  
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: product-service
+  labels:
+    app: product-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: product-service
+  template:
+    metadata:
+      labels:
+        app: product-service
+    spec:
+      containers:
+      - imagePullSecrets:
+        name: harbor-secret
+      - name: product-service
+        image: 13.200.210.3:443/backend/product-service:1.0
+        ports:
+        - containerPort: 5003
+      - configMapRef:
+        name: product-config 
+         
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mongodb
+  labels:
+    app: mongodb
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mongodb
+  template:
+    metadata:
+      labels:
+        app: mongodb
+    spec:
+      containers:
+      - name: mongodb
+        image: mongo:4.4
+        ports:
+        - containerPort: 27017
