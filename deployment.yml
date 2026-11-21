@@ -1,33 +1,6 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: recommendation-service
-  labels:
-    app: recommendation-service
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: recommendation-service
-  template:
-    metadata:
-      labels:
-        app: recommendation-service
-    spec:
-      imagePullSerects:
-        - name: harbor-secret
-      containers:
-      - name: recommendation-service
-        image: 13.200.210.101:443/backend/recommendation:1.0
-        ports:
-        - containerPort: 8080
-        envFrom:
-          - configMapRef:
-              name: recommendation-config 
----
-apiVersion: apps/v1
-kind: Deployment
-metadata:
   name: audit-service
   labels:
     app: audit-service
@@ -648,26 +621,53 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: api-gateway-service
+  name: analytics-service
   labels:
-    app: api-gateway-service
+    app: analytics-service
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: api-gateway-service
+      app: analytics-service
   template:
     metadata:
       labels:
-        app: api-gateway-service
+        app: analytics-service
     spec:
       imagePullSerects:
         - name: harbor-secret
       containers:
-      - name: api-gateway-service
-        image: 13.200.210.101:443/backend/api-gateway:1.0
+      - name: analytics-service
+        image: 13.200.210.101:443/backend/analytics:1.0
         ports:
         - containerPort: 8080
         envFrom:
           - configMapRef:
-              name: api-gateway-config                                                                                                                                                                                                                                                                                                
+              name: analytics-config                                                                                                                                                                                                                                                                                                
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: analytics-service
+  labels:
+    app: analytics-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: analytics-service
+  template:
+    metadata:
+      labels:
+        app: analytics-service
+    spec:
+      imagePullSerects:
+        - name: harbor-secret
+      containers:
+      - name: analytics-service
+        image: 13.200.210.101:443/backend/analytics:1.0
+        ports:
+        - containerPort: 8080
+        envFrom:
+          - configMapRef:
+              name: analytics-config                                                                                                                                                                                                                                                                                                
