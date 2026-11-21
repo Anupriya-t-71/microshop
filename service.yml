@@ -3,8 +3,8 @@ kind: Service
 metadata:
   name: auth-service
 spec:
+  type: ClusterIP
   selector:
-    type: ClusterIP
     app: auth-service
   ports:
     - protocol: TCP
@@ -16,8 +16,8 @@ kind: Service
 metadata:
   name: auth-service
 spec:
+  type: ClusterIP
   selector:
-    type: ClusterIP
     app: auth-service
   ports:
     - protocol: TCP
@@ -29,8 +29,8 @@ kind: Service
 metadata:
   name: audit-service
 spec:
+  type: ClusterIP
   selector:
-    type: ClusterIP
     app: audit-service
   ports:
     - protocol: TCP
@@ -42,8 +42,8 @@ kind: Service
 metadata:
   name: cart-service
 spec:
+  type: ClusterIP
   selector:
-    type: ClusterIP
     app: cart-service
   ports:
     - protocol: TCP
@@ -55,8 +55,8 @@ kind: Service
 metadata:
   name: coupon-service
 spec:
+  type: ClusterIP
   selector:
-    type: ClusterIP
     app: coupon-service
   ports:
     - protocol: TCP
@@ -68,8 +68,8 @@ kind: Service
 metadata:
   name: catalog-service
 spec:
+  type: ClusterIP
   selector:
-    type: ClusterIP
     app: catalog-service
   ports:
     - protocol: TCP
@@ -81,8 +81,8 @@ kind: Service
 metadata:
   name: email-service
 spec:
+  type: ClusterIP
   selector:
-    type: ClusterIP
     app: email-service
   ports:
     - protocol: TCP
@@ -94,8 +94,8 @@ kind: Service
 metadata:
   name: inventory-service
 spec:
+  type: ClusterIP
   selector:
-    type: ClusterIP
     app: inventory-service
   ports:
     - protocol: TCP
@@ -107,8 +107,8 @@ kind: Service
 metadata:
   name: media-service
 spec:
+  type: ClusterIP
   selector:
-    type: ClusterIP
     app: media-service
   ports:
     - protocol: TCP
@@ -120,8 +120,8 @@ kind: Service
 metadata:
   name: notification-service
 spec:
+  type: ClusterIP
   selector:
-    type: ClusterIP
     app: notification-service
   ports:
     - protocol: TCP
@@ -133,8 +133,8 @@ kind: Service
 metadata:
   name: order-service
 spec:
+  type: ClusterIP
   selector:
-    type: ClusterIP
     app: order-service
   ports:
     - protocol: TCP
@@ -146,8 +146,8 @@ kind: Service
 metadata:
   name: payment-service
 spec:
+  type: ClusterIP
   selector:
-    type: ClusterIP
     app: payment-service
   ports:
     - protocol: TCP
@@ -159,8 +159,8 @@ kind: Service
 metadata:
   name: profile-service
 spec:
+  type: ClusterIP
   selector:
-    type: ClusterIP
     app: profile-service
   ports:
     - protocol: TCP
@@ -172,8 +172,8 @@ kind: Service
 metadata:
   name: product-service
 spec:
+  type: ClusterIP
   selector:
-    type: ClusterIP
     app: product-service
   ports:
     - protocol: TCP
@@ -185,8 +185,8 @@ kind: Service
 metadata:
   name: recommendation-service
 spec:
+  type: ClusterIP
   selector:
-    type: ClusterIP
     app: recommendation-service
   ports:
     - protocol: TCP
@@ -198,8 +198,8 @@ kind: Service
 metadata:
   name: review-service
 spec:
+  type: ClusterIP
   selector:
-    type: ClusterIP
     app: review-service
   ports:
     - protocol: TCP
@@ -211,8 +211,8 @@ kind: Service
 metadata:
   name: reporting-service
 spec:
+  type: ClusterIP
   selector:
-    type: ClusterIP
     app: reporting-service
   ports:
     - protocol: TCP
@@ -224,8 +224,8 @@ kind: Service
 metadata:
   name: search-service
 spec:
+  type: ClusterIP
   selector:
-    type: ClusterIP
     app: search-service
   ports:
     - protocol: TCP
@@ -237,8 +237,8 @@ kind: Service
 metadata:
   name: settings-service
 spec:
+  type: ClusterIP
   selector:
-    type: ClusterIP
     app: settings-service
   ports:
     - protocol: TCP
@@ -250,8 +250,8 @@ kind: Service
 metadata:
   name: scheduler-service
 spec:
+  type: ClusterIP
   selector:
-    type: ClusterIP
     app: scheduler-service
   ports:
     - protocol: TCP
@@ -263,8 +263,8 @@ kind: Service
 metadata:
   name: shipping-service
 spec:
+  type: ClusterIP
   selector:
-    type: ClusterIP
     app: shipping-service
   ports:
     - protocol: TCP
@@ -276,8 +276,8 @@ kind: Service
 metadata:
   name: sms-service
 spec:
+  type: ClusterIP
   selector:
-    type: ClusterIP
     app: sms-service
   ports:
     - protocol: TCP
@@ -289,8 +289,8 @@ kind: Service
 metadata:
   name: user-service
 spec:
+  type: ClusterIP
   selector:
-    type: ClusterIP
     app: user-service
   ports:
     - protocol: TCP
@@ -302,8 +302,8 @@ kind: Service
 metadata:
   name: wishlist-service
 spec:
+  type: ClusterIP
   selector:
-    type: ClusterIP
     app: wishlist-service
   ports:
     - protocol: TCP
@@ -315,8 +315,8 @@ kind: Service
 metadata:
   name: api-gateway-service
 spec:
+  type: NodePort
   selector:
-    type: NodePort
     app: api-gateway-service
   ports:
     - protocol: TCP
